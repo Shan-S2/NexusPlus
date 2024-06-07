@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,7 +16,7 @@ namespace NexusPlus
         private readonly List<AnimatedTriangle> _triangles = new List<AnimatedTriangle>();
 
 
-        private const int _triangleCount = 7; // Reduce the number of triangles
+        private const int _triangleCount = 7; //Number of triangles
 
         public MainWindow()
         {
@@ -60,7 +60,7 @@ namespace NexusPlus
             UpdateCaretPosition((TextBox)sender);
         }
 
-        private void UpdateCaretPosition(TextBox textBox)
+        private void UpdateCaretPosition(TextBox textBox) //Smooth caret movement
         {
             var caretIndex = textBox.CaretIndex;
             var rect = textBox.GetRectFromCharacterIndex(caretIndex, true);
@@ -107,7 +107,7 @@ namespace NexusPlus
 
         private AnimatedTriangle CreateTriangle()
         {
-            double size = _random.Next(3, 12);
+            double size = _random.Next(3, 12); //Random triangle size between 3 and 12
             double xPos = _random.NextDouble() * (canvas.ActualWidth - size) + (size / 2);
             var triangle = new Polygon
             {
@@ -118,7 +118,7 @@ namespace NexusPlus
                     new Point(0, Math.Sqrt(3) / 2 * size)
                 },
                 Fill = Brushes.White,
-                Effect = new DropShadowEffect
+                Effect = new DropShadowEffect //Triangle outer glow.
                 {
                     Color = Colors.White,
                     BlurRadius = 13,
@@ -154,7 +154,6 @@ namespace NexusPlus
         private readonly double _size;
         private double _deltaX;
         private double _deltaY;
-        private double _rotationSpeed;
         private Point _rotationCenter;
 
         public AnimatedTriangle(Polygon polygon, double size, Random random, double xPos)
@@ -164,15 +163,14 @@ namespace NexusPlus
             X = xPos;
             Y = -_size;
 
-            double angle = random.Next(80, 111) + (random.NextDouble() - 0.5) * 20;
+            double angle = random.Next(80, 111) + (random.NextDouble() - 0.5) * 20;  //Random travelling angle
             double radians = Math.PI * angle / 180;
             double speed = random.NextDouble() * 8 + 1;
             _deltaX = speed * Math.Cos(radians);
             _deltaY = speed * Math.Sin(radians);
 
-            _rotationSpeed = (random.NextDouble() - 0.5) * 10;
 
-            _rotationCenter = new Point(size / 2, Math.Sqrt(3) / 2 * size / 2);
+            _rotationCenter = new Point(size / 2, Math.Sqrt(3) / 2 * size / 2);  //Calculate rotation center to spin itself
         }
 
         public void UpdatePosition(double canvasWidth, double canvasHeight, Random random)
@@ -214,7 +212,7 @@ namespace NexusPlus
             {
                 From = 360,
                 To = 0,
-                Duration = TimeSpan.FromSeconds(random.Next(3, 8)),
+                Duration = TimeSpan.FromSeconds(random.Next(3, 8)),  //Spinning speed
                 RepeatBehavior = RepeatBehavior.Forever
             };
 
