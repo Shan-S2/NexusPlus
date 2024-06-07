@@ -1,0 +1,87 @@
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\NexusPlus.exe.config
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\NexusPlus.exe
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\NexusPlus.pdb
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus.csproj.AssemblyReference.cache
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\MainWindow.g.cs
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\App.g.cs
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus_MarkupCompile.cache
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus_MarkupCompile.lref
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\MainWindow.baml
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus.g.resources
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus.Properties.Resources.resources
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus.csproj.GenerateResource.cache
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus.csproj.CoreCompileInputs.cache
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus.exe
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus.pdb
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\MaterialDesignColors.dll
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\NexusPlus.csproj.Up2Date
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\obj\Debug\App.baml
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\ControlzEx.dll
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\ControlzEx.pdb
+C:\Users\Shan S2\Desktop\NexusPlus\NexusPlus\bin\Debug\ControlzEx.xml
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\NexusPlus.exe.config
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\NexusPlus.exe
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\NexusPlus.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\ControlzEx.dll
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\MaterialDesignColors.dll
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\ControlzEx.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\ControlzEx.xml
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus.csproj.AssemblyReference.cache
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\MainWindow.g.cs
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\App.g.cs
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus_MarkupCompile.cache
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus_MarkupCompile.lref
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\App.baml
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\MainWindow.baml
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus.g.resources
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus.Properties.Resources.resources
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus.csproj.GenerateResource.cache
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus.csproj.CoreCompileInputs.cache
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus.csproj.Up2Date
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus.exe
+C:\Users\Shan S2\Desktop\NexusPlus - DirectX Test\NexusPlus\obj\Debug\NexusPlus.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\NexusPlus.exe.config
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\NexusPlus.exe
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\NexusPlus.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\ControlzEx.dll
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\MaterialDesignColors.dll
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\ControlzEx.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\ControlzEx.xml
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus.csproj.AssemblyReference.cache
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\MainWindow.g.cs
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\App.g.cs
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus_MarkupCompile.cache
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus_MarkupCompile.lref
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\App.baml
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\MainWindow.baml
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus.g.resources
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus.Properties.Resources.resources
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus.csproj.GenerateResource.cache
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus.csproj.CoreCompileInputs.cache
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus.csproj.Up2Date
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus.exe
+C:\Users\Shan S2\Desktop\NexusPlus - NoFody\NexusPlus\obj\Debug\NexusPlus.pdb

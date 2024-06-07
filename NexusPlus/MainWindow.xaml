@@ -1,0 +1,397 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NexusPlus" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        x:Class="NexusPlus.MainWindow"
+        mc:Ignorable="d"
+        x:Name="Login"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="{x:Null}"
+        Title="Nexus+" Height="450" Width="700"
+        KeyDown="Window_KeyDown"
+        Loaded="Main_Load">
+    <Window.Resources>
+
+        <Storyboard x:Key="WindowWidthAnimation">
+            <DoubleAnimation
+                Storyboard.TargetName="MainWin"
+                Storyboard.TargetProperty="Width"
+                From="0"
+                To="700" 
+                Duration="0:0:0.6">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation
+                 Storyboard.TargetName="MainWin"
+                 Storyboard.TargetProperty="Opacity"
+                 From="0"
+                 To="1.0" 
+                 Duration="0:0:0.4">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Style x:Key="GlowingTextBox" TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFilledTextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <!-- TextBox with Glow Effect -->
+                            <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="3">
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="12" ShadowDepth="0" Color="White" Opacity="0"/>
+                                </Border.Effect>
+                                <ScrollViewer x:Name="PART_ContentHost"
+                                      VerticalAlignment="Center"
+                                      Margin="8,0,0,0"
+                                      Padding="0"
+                                      Background="Transparent"
+                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </Border>
+
+                            <!-- Hint Text -->
+                            <TextBlock x:Name="hintTextBlock"
+                               Text="{TemplateBinding Tag}"
+                               Foreground="#FF808080"
+                               Margin="10,8,0,0"
+                               Visibility="Collapsed"/>
+
+                            <!-- Animated Caret Rectangle -->
+                            <Rectangle x:Name="animatedCaretRectangle" Fill="White" Width="1.5" Height="0" Opacity="0.0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="1,0,0,0" />
+
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <!-- Glow Effect Trigger -->
+                            <Trigger Property="IsFocused" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetName="border" 
+                                                    Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                    To="White" Duration="0:0:0.3"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                     Storyboard.TargetProperty="Effect.ShadowDepth"
+                                                     To="0" Duration="0:0:0.3"/>
+                                            <DoubleAnimation Storyboard.TargetName="animatedCaretRectangle"
+                                                     Storyboard.TargetProperty="Height"
+                                                     To="17" Duration="0:0:0.2"/>
+                                            <ThicknessAnimation Storyboard.TargetName="animatedCaretRectangle"
+                                                     Storyboard.TargetProperty="Margin"
+                                                     To="10,0,0,0" Duration="0:0:0.150"/>
+                                            <DoubleAnimation Storyboard.TargetName="animatedCaretRectangle"
+                                                     Storyboard.TargetProperty="Opacity" AutoReverse="True" RepeatBehavior="Forever"
+                                                     To="1.0" Duration="0:0:0.5"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                     Storyboard.TargetProperty="Effect.Opacity"
+                                                     To="1.0" Duration="0:0:0.3"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetName="border" 
+                                                    Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                    To="#17171c" Duration="0:0:0.2"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                     Storyboard.TargetProperty="Effect.ShadowDepth"
+                                                     To="0" Duration="0:0:0.2"/>
+                                            <DoubleAnimation Storyboard.TargetName="animatedCaretRectangle"
+                                                     Storyboard.TargetProperty="Height"
+                                                     To="0" Duration="0:0:0.150"/>
+                                            <ThicknessAnimation Storyboard.TargetName="animatedCaretRectangle"
+                                                     Storyboard.TargetProperty="Margin"
+                                                     To="1,0,0,0" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetName="animatedCaretRectangle"
+                                                     Storyboard.TargetProperty="Opacity"
+                                                     To="0.0" Duration="0:0:0.3"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                     Storyboard.TargetProperty="Effect.Opacity"
+                                                     To="0" Duration="0:0:0.2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+
+                            <!-- Show Hint Text Trigger -->
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value="" />
+                                    <Condition Property="IsEnabled" Value="True" />
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="hintTextBlock" Property="Visibility" Value="Visible"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ContextMenu" Value="{x:Null}" />
+        </Style>
+
+
+        <Storyboard x:Key="BreatheGlow">
+            <DoubleAnimation From="0.0" To="1.0" Storyboard.TargetProperty="(Effect).Opacity"
+                                 Duration="0:0:2" AutoReverse="True" RepeatBehavior="Forever"/>
+
+        </Storyboard>
+
+    </Window.Resources>
+
+    <materialDesign:Card x:Name="MainWin" Opacity="0" Background="#FF08080a" UniformCornerRadius="3" Width="0" Height="450">
+        <Grid>
+            <Canvas x:Name="canvas1" Background="Transparent" Panel.ZIndex="1">
+
+                <TextBox x:Name="txtUsername" Width="440" FontSize="14"
+                         Tag="Username"
+                         materialDesign:HintAssist.Hint="Username" 
+                         BorderThickness="1"
+                         MaxLength="32"
+                         Style="{StaticResource GlowingTextBox}"
+                         Height="35" Background="#FF0c0c10" 
+                         BorderBrush="#17171c" Foreground="White" 
+                         AcceptsReturn="False" FontStretch="Normal" MaxLines="1" Padding="10,0,0,0"
+                         SelectionBrush="#FF404040" HorizontalAlignment="Center" Canvas.Left="130" Canvas.Top="129" VerticalAlignment="Center" CaretBrush="#00000000"/>
+
+                <TextBox x:Name="txtPassword" Width="440" FontSize="14"
+                         Tag="Password"
+                         MaxLength="32"
+                         materialDesign:HintAssist.Hint="Password" BorderThickness="1"
+                         Style="{StaticResource GlowingTextBox}" CaretBrush="#00000000"
+                         Height="35" Background="#FF0c0c10" BorderBrush="#17171c" Foreground="White" 
+                         AcceptsReturn="False" FontStretch="Normal" MaxLines="1" Padding="10,0,0,0"
+                         SelectionBrush="#FF404040" HorizontalAlignment="Center" Canvas.Left="130" Canvas.Top="180" VerticalAlignment="Top"/>
+
+                <TextBox x:Name="txtLicense" Width="440" FontSize="14"
+                         Tag="License"
+                         MaxLength="32"
+                         materialDesign:HintAssist.Hint="License" BorderThickness="1"
+                         Style="{StaticResource GlowingTextBox}" CaretBrush="#00000000"
+                         Height="35" Background="#FF0c0c10" BorderBrush="#17171c" Foreground="White" 
+                         AcceptsReturn="False" FontStretch="Normal" MaxLines="1" Padding="10,0,0,0"
+                         SelectionBrush="#FF404040" HorizontalAlignment="Center" Canvas.Left="130" Canvas.Top="230" VerticalAlignment="Center"/>
+
+                <Button x:Name="signinbtn" Content="SIGN IN" 
+                        Style="{StaticResource MaterialDesignRaisedButton}" 
+                        Width="440" 
+                        Canvas.Left="130" 
+                        Canvas.Top="320" 
+                        Background="Transparent" 
+                        Foreground="White" 
+                        BorderBrush="#17171c"
+                        FontFamily="Segoe UI" 
+                        FontWeight="Normal" 
+                        FontSize="16">
+
+                    <Button.RenderTransformOrigin>
+                        <Point X="0.5" Y="0.5"/>
+                        <!-- Set RenderTransformOrigin to center -->
+                    </Button.RenderTransformOrigin>
+
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </Button.RenderTransform>
+
+                    <Button.Resources>
+                        <Storyboard x:Key="HoverStoryboard">
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+                             To="0.97" 
+                             Duration="0:0:0.2"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                            To="#44ffffff"
+                            Duration="0:0:0.2"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.BorderBrush).(SolidColorBrush.Color)" 
+                            To="#44ffffff"
+                            Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+                             To="0.97" 
+                             Duration="0:0:0.2"/>
+                        </Storyboard>
+                        <Storyboard x:Key="HoverEndStoryboard">
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+                             To="1" 
+                             Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+                             To="1" 
+                             Duration="0:0:0.2"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                            To="Transparent" 
+                            Duration="0:0:0.2"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.BorderBrush).(SolidColorBrush.Color)" 
+                            To="#17171c"
+                            Duration="0:0:0.2"/>
+                        </Storyboard>
+                        <Storyboard x:Key="ClickStoryboard">
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+                             To="0.93" 
+                             Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+                             To="0.93" 
+                             Duration="0:0:0.2"/>
+                        </Storyboard>
+                        <Storyboard x:Key="ClickEndStoryboard">
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+                             To="0.97" 
+                             Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+                             To="0.97" 
+                             Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </Button.Resources>
+
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard Storyboard="{StaticResource HoverStoryboard}"/>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard Storyboard="{StaticResource HoverEndStoryboard}"/>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="PreviewMouseDown">
+                            <BeginStoryboard Storyboard="{StaticResource ClickStoryboard}"/>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="PreviewMouseUp">
+                            <BeginStoryboard Storyboard="{StaticResource ClickEndStoryboard}"/>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+
+
+
+                <Button x:Name="regbtn" Content="REGISTER" 
+                        Style="{StaticResource MaterialDesignRaisedButton}" 
+                        Width="440" 
+                        Canvas.Left="130" 
+                        Canvas.Top="360" 
+                        Background="Transparent" 
+                        Foreground="White" 
+                        BorderBrush="#17171c"
+                        FontFamily="Segoe UI" 
+                        FontWeight="Normal" 
+                        FontSize="16"
+                        Click="regbtn_Click">
+
+                    <Button.RenderTransformOrigin>
+                        <Point X="0.5" Y="0.5"/>
+                        <!-- Set RenderTransformOrigin to center -->
+                    </Button.RenderTransformOrigin>
+
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </Button.RenderTransform>
+
+                    <Button.Resources>
+                        <Storyboard x:Key="HoverStoryboard">
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+                             To="0.97" 
+                             Duration="0:0:0.2"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                            To="#44ffffff"
+                            Duration="0:0:0.2"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.BorderBrush).(SolidColorBrush.Color)" 
+                            To="#44ffffff"
+                            Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+                             To="0.97" 
+                             Duration="0:0:0.2"/>
+                        </Storyboard>
+                        <Storyboard x:Key="HoverEndStoryboard">
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+                             To="1" 
+                             Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+                             To="1" 
+                             Duration="0:0:0.2"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                            To="Transparent" 
+                            Duration="0:0:0.2"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.BorderBrush).(SolidColorBrush.Color)" 
+                            To="#17171c"
+                            Duration="0:0:0.2"/>
+                        </Storyboard>
+                        <Storyboard x:Key="ClickStoryboard">
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+                             To="0.93" 
+                             Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+                             To="0.93" 
+                             Duration="0:0:0.2"/>
+                        </Storyboard>
+                        <Storyboard x:Key="ClickEndStoryboard">
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+                             To="0.97" 
+                             Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+                             To="0.97" 
+                             Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </Button.Resources>
+
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard Storyboard="{StaticResource HoverStoryboard}"/>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard Storyboard="{StaticResource HoverEndStoryboard}"/>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="PreviewMouseDown">
+                            <BeginStoryboard Storyboard="{StaticResource ClickStoryboard}"/>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="PreviewMouseUp">
+                            <BeginStoryboard Storyboard="{StaticResource ClickEndStoryboard}"/>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+
+
+                <TextBlock TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="ClearType" Canvas.Left="256" TextWrapping="Wrap" Text="NEXUS+" Canvas.Top="38"
+                       TextOptions.TextHintingMode="Fixed" FontFamily="{StaticResource Nevan}" FontSize="45" Foreground="White">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="10" Color="White" ShadowDepth="0"/>
+                    </TextBlock.Effect>
+
+                </TextBlock>
+
+                <TextBlock TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="ClearType" Canvas.Left="256" TextWrapping="Wrap" Text="NEXUS+" Canvas.Top="38"
+                        TextOptions.TextHintingMode="Fixed" FontFamily="{StaticResource Nevan}" FontSize="45" Foreground="White">
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect BlurRadius="25" Color="White" ShadowDepth="0"/>
+
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <EventTrigger RoutedEvent="Loaded">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard Storyboard="{StaticResource BreatheGlow}"/>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+                <CheckBox Canvas.Left="130" Canvas.Top="285" Foreground="White"
+                          Background="White" Content="Remember Me" FontFamily="Arial" HorizontalAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="4"/>
+
+            </Canvas>
+            <Canvas x:Name="canvas" Width="700" Height="450" Background="Transparent" Panel.ZIndex="0"/>
+
+        </Grid>
+
+    </materialDesign:Card>
+
+</Window>
