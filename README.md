@@ -19,4 +19,4 @@ NexusPlus is a Free Cheat Menu Loader source built with C# (WPF) inspired by ***
 **● Fully Customizable**
 
 # Important
-Install [Fody](https://www.nuget.org/packages/Fody) and [Costura.Fody](https://www.nuget.org/packages/Costura.Fody) NuGet packages to weave .NET assemblies together. (To get a single file output)
+Install [Fody](https://www.nuget.org/packages/Fody) and [Costura.Fody](https://www.nuget.org/packages/Costura.Fody) NuGet packages to weave .NET assemblies together. (To get a single output file)
