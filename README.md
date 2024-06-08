@@ -1,4 +1,8 @@
 # NexusPlus
+[![C#](https://img.shields.io/badge/Language-C%23-%23a277da.svg?style=flat)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))
+[![Windows](https://img.shields.io/badge/Platform-Windows-0078d7.svg?style=flat)](https://en.wikipedia.org/wiki/Microsoft_Windows) 
+[![x64](https://img.shields.io/badge/Arch-x64-green.svg?style=flat)](https://en.wikipedia.org/wiki/X64) 
+
 
 NexusPlus is a Free Cheat Menu Loader source built with C# (WPF) inspired by ***Dear ImGui***
 
